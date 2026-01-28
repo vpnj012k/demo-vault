@@ -7,7 +7,7 @@ COPY . .
 RUN go get -d -v ./... && \
     CGO_ENABLED=0 go build -o /bin/server ./
 
-FROM alpine:latest
+FROM alpine:3.23.3
 
 RUN apk add curl
 
